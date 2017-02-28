@@ -13,13 +13,23 @@ request(sourceURL, function(err ,res, body) {
     console.log(res.statusCode);
     var $ = cheerio.load(body);
 
+    let collection = [{}]
+    $('.auctioncategories').find('tr').each(function(i,el){
+      obj = {}
+      $(this).find('td').each(function(j,elem){
+        if (j===0)
+          obj["id"] = $(this).text()
+        if (j===1)
+        obj["item"]=$(this).text()
+        if (j===2)
+          obj["price"]=$(this).text()
 
+      })
 
-    $('.auctioncategories').filter(function(){
-      var data = $(this).children().children().children().children()
-      console.log(data)
-    })
+        collection.push(obj)
+      })
 
+    console.log(collection)
 
   }
 });
