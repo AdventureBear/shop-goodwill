@@ -1,0 +1,11 @@
+{
+  "name": "shopgoodwill",
+  "version": "1.0.0",
+  "description": "compare auction prices",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suzanne M. Atkinson",
+  "license": "MIT"
+}
